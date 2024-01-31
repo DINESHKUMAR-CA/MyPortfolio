@@ -947,7 +947,7 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url('/assets/imgs/Homepage.jpg');
+  background-image: url('https://ik.imagekit.io/6b8l4syfml/imgs/Homepage.jpg?updatedAt=1706697975567');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1380,7 +1380,7 @@ p {
   padding: 100px 0 !important;
 }
 .section-sm.bg-primary {
-  background-image: url('/assets/imgs/Bengaluru.png'); 
+  background-image: url('https://ik.imagekit.io/6b8l4syfml/imgs/Bengaluru.png?updatedAt=1706697972512'); 
   background-size: cover;
 }
 .section-md {
