@@ -1,43 +1,5 @@
-/*!
-=========================================================
-* Meyawo Landing page
-=========================================================
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// smooth scroll
-// $(document).ready(function(){
-//     $(".navbar .nav-link").on('click', function(event) {
-
-//         if (this.hash !== "") {
-
-//             event.preventDefault();
-
-//             var hash = this.hash;
-
-//             $('html, body').animate({
-//                 scrollTop: $(hash).offset().top
-//             }, 700, function(){
-//                 window.location.hash = hash;
-//             });
-//         } 
-//     });
-// });
-
-// // navbar toggle
-// $('#nav-toggle').click(function(){
-//     $(this).toggleClass('is-active')
-//     $('ul.nav').toggleClass('show');
-// });
-
-// smooth scroll - ChatGPT
+// smooth scroll 
 $(document).ready(function () {
     $(".navbar .nav-link").on('click', function (event) {
         if (this.hash !== "") {
@@ -92,15 +54,23 @@ function closePopup(event) {
 
 //scroll-To-Top-button
 
-// Add scroll event listener to show/hide the button
-document.addEventListener('scroll', function() {
-    var button = document.getElementById('btnScrollToTop');
+// Function to toggle the visibility of the scroll-to-top button
+function toggleScrollToTopButton() {
+    var button = document.getElementById('scrollToTopBtn');
     // Show/hide the button with smooth transition
     button.style.opacity = (window.scrollY > window.innerHeight / 2) ? '1' : '0';
+}
+
+// Add scroll event listener to show/hide the button
+document.addEventListener('scroll', toggleScrollToTopButton);
+
+// Initial check for button visibility on page load
+document.addEventListener('DOMContentLoaded', function() {
+    toggleScrollToTopButton();
 });
 
 // Add click event listener to the button
-document.getElementById('btnScrollToTop').addEventListener('click', function() {
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
     // Scroll to the top of the page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });

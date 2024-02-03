@@ -1500,34 +1500,31 @@ p {
   text-align: right !important;
 }
 
-/* Button scroll to top */
+/* Scroll to top Button */
 
-#btnScrollToTop {
-position: fixed;
-bottom: 40px;
-right: 20px;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background: #695aa6;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-color: #fff;
-border: none;
-outline: none;
-cursor: pointer;
-transition: opacity 0.3s ease;
-}
-
-.material-icons {
-  position: relative;
-  left: 1px;
-  top: 1px;
-}
-
-#btnScrollToTop:active {
-  background: #5e5195;
-}
-
-
-
-
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #695aa6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  }
+  
+  .material-icons {
+    position: relative;
+    left: 1px;
+    top: 1px;
+  }
+  
+  #scrollToTopBtn:active {
+    background: #5e5195;
+  }
