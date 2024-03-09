@@ -36,6 +36,13 @@ $(document).ready(function () {
     });
 });
 
+    //Scrolling to My work section on the page
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+
 //Austin's pop-up code
 
 function openPopup(event) {
@@ -61,7 +68,7 @@ function toggleScrollToTopButton() {
     button.style.opacity = (window.scrollY > window.innerHeight / 2) ? '1' : '0';
 }
 
-// Add scroll event listener to show/hide the button
+// Adding scroll event listener to show/hide the button
 document.addEventListener('scroll', toggleScrollToTopButton);
 
 // Initial check for button visibility on page load
@@ -69,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleScrollToTopButton();
 });
 
-// Add click event listener to the button
 document.getElementById('scrollToTopBtn').addEventListener('click', function() {
-    // Scroll to the top of the page
+    // Scrolling to the top of the page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+

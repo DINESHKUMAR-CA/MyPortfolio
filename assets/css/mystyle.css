@@ -934,6 +934,7 @@ p {
 
 /* Header section */
 
+/* Header section */
 .header {
   position: relative;
   height: 100vh;
@@ -941,17 +942,18 @@ p {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-image: url('https://ik.imagekit.io/6b8l4syfml/imgs/Homepage.jpg?updatedAt=1706697975567');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .header .overlay {
   position: absolute;
   top: 0;
@@ -960,54 +962,77 @@ p {
   height: 100%;
   background-size: cover;
 }
+
 .header .header-content {
   margin-top: 20px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   max-width: 550px;
 }
+
 .header .header-content .header-title .up {
   font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
   color: #ffffff;
   margin-bottom: 5px;
   position: relative;
   display: block;
+  animation: slideInFromBack 1s ease-out 0.2s forwards;
 }
+
 .header .header-content .header-title .down {
   font-size: calc(40px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
   margin-bottom: 0;
   position: relative;
   display: block;
+  animation: slideInFromBack 1s ease-out 0.4s forwards;
 }
+
 .header .header-content .header-subtitle {
   font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
   letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
-  opacity: .8;
+  opacity: 0.8;
   margin-top: -10px;
   margin-bottom: 20px;
   color: #ffffff;
+  animation: slideInFromBack 1s ease-out 0.6s forwards;
 }
+
 .header .header-content .btn {
   position: relative;
   margin-top: 20px;
   border-radius: 20px;
   padding: 8px 15px;
+  animation: slideInFromBack 1s ease-out 0.8s forwards;
 }
+
 .header-title {
   font-size: 2.4rem;
   font-weight: bold;
-  font-family: 'Rubik Dirt', system-ui ;
-  opacity: .9;
+  font-family: 'Rubik Dirt', system-ui;
+  opacity: 0.9;
   color: #ffffff;
 }
+
 @media (max-width: 991.98px) {
   .header {
-    background-size: cover;
+      background-size: cover;
   }
   .header-content {
-    padding-left: calc(100% / 5) !important;
+      padding-left: calc(100% / 5) !important;
+  }
+}
+
+/* Animation keyframes */
+@keyframes slideInFromBack {
+  0% {
+      transform: translateZ(-200px) scale(0.1);
+      opacity: 0;
+  }
+  100% {
+      transform: translateZ(0) scale(1);
+      opacity: 1;
   }
 }
 
